@@ -18,7 +18,7 @@ public class TransformerHei extends Transformer.Default {
 
     @Override
     public boolean accepts(String name) {
-        return HechConfig.enableHEI && ("mezz.jei.search.PrefixInfo".equals(name) || "mezz.jei.search.SearchToken".equals(name));
+        return HechConfig.enableHEI && "mezz.jei.search.PrefixInfo".equals(name);
     }
 
     @Override

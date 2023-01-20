@@ -79,6 +79,21 @@ public class HechCommand extends CommandBase {
                 case "ziranma":
                     HechConfig.setKeyboard(HechConfig.Spell.ZIRANMA);
                     break;
+                case "sougou":
+                    HechConfig.setKeyboard(HechConfig.Spell.SOUGOU);
+                    break;
+                case "guobiao":
+                    HechConfig.setKeyboard(HechConfig.Spell.GUOBIAO);
+                    break;
+                case "microsoft":
+                    HechConfig.setKeyboard(HechConfig.Spell.MICROSOFT);
+                    break;
+                case "pinyinjiajia":
+                    HechConfig.setKeyboard(HechConfig.Spell.PINYINPP);
+                    break;
+                case "ziguang":
+                    HechConfig.setKeyboard(HechConfig.Spell.ZIGUANG);
+                    break;
                 default:
                     sender.sendMessage(new TextComponentTranslation("command.unknown"));
                     break;
@@ -96,7 +111,7 @@ public class HechCommand extends CommandBase {
         else if (args.length == 2 && args[0].equals("verbose"))
             return getListOfStringsMatchingLastWord(args, "true", "false");
         else if (args.length == 2 && "keyboard".equals(args[0]))
-            return getListOfStringsMatchingLastWord(args, "quanpin", "daqian", "xiaohe", "ziranma");
+            return getListOfStringsMatchingLastWord(args, "quanpin", "daqian", "xiaohe", "ziranma", "sougou", "guobiao", "microsoft", "pinyinjiajia", "ziguang");
         else
             return Collections.emptyList();
     }

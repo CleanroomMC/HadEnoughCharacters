@@ -174,7 +174,7 @@ public class HechConfig {
                 case ENABLE_DUMP_CLASS_NAME:
                     return "Set to true to dump all the class names";
                 case STRING_KEYBOARD:
-                    return "Choose keyboard(It needs to be in all caps): QUANPIN(quanpin),  DAQIAN(phonetic/Daqian), XIAOHE(xiaohe), ZIRANMA(ziranma)";
+                    return "Choose keyboard(It needs to be in all caps): QUANPIN(quanpin),  DAQIAN(phonetic/Daqian), XIAOHE(xiaohe), ZIRANMA(ziranma), SOUGOU(sougou), GUOBIAO(guobiao) ,MICROSOFT(microsoft), PINYINPP(pinyinjiajia), ZIGUANG(ziguang)";
             }
             return "";
         }
@@ -530,7 +530,10 @@ public class HechConfig {
 
     public enum Spell {
         QUANPIN(Keyboard.QUANPIN), DAQIAN(Keyboard.DAQIAN),
-        XIAOHE(Keyboard.XIAOHE), ZIRANMA(Keyboard.ZIRANMA);
+        XIAOHE(Keyboard.XIAOHE), ZIRANMA(Keyboard.ZIRANMA),
+        SOUGOU(Keyboard.SOUGOU), GUOBIAO(Keyboard.GUOBIAO),
+        MICROSOFT(Keyboard.MICROSOFT), PINYINPP(Keyboard.PINYINPP),
+        ZIGUANG(Keyboard.ZIGUANG);
 
         public final Keyboard keyboard;
 
