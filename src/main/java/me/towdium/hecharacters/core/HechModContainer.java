@@ -4,7 +4,6 @@ import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 import me.towdium.hecharacters.HechCommand;
 import me.towdium.hecharacters.HechConfig;
-import me.towdium.pinin.Keyboard;
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.ICommand;
 import net.minecraft.entity.player.EntityPlayer;
