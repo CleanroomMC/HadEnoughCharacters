@@ -1,7 +1,6 @@
 package me.towdium.hecharacters.core;
 
 import me.towdium.hecharacters.transform.TransformerRegistry;
-import me.towdium.hecharacters.util.Match;
 import net.minecraftforge.fml.relauncher.IFMLCallHook;
 
 import java.util.Map;

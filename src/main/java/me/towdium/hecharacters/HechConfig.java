@@ -293,6 +293,7 @@ public class HechConfig {
                             "com.mia.props.client.container.GuiDecobench:refreshButtons",  // Decofraft workbench
                             "mrriegel.storagenetwork.gui.GuiRequest:match",  // Storage Network
                             "vazkii.quark.client.feature.ChestSearchBar:lambda$namesMatch$0",  // quark chest
+                            "vazkii.quark.client.feature.ChestSearchBar:namesMatch", // quark chest
                             "logisticspipes.gui.orderer.GuiOrderer:isSearched",  // Logistics Pipes orderer
                             "logisticspipes.gui.orderer.GuiRequestTable:isSearched",  // Logistics Pipes request table
                             "us.getfluxed.controlsearch.client.gui.GuiNewControls:refreshKeys",  // Controlling
