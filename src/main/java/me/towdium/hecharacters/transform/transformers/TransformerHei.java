@@ -42,7 +42,7 @@ public class TransformerHei extends Transformer.Default {
                     MethodInsnNode methodInsn = (MethodInsnNode) node;
                     if ("java/util/regex/Pattern".equals(methodInsn.owner) && "matcher".equals(methodInsn.name) && "(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;".equals(methodInsn.desc)) {
                         list.insert(node.getPrevious(), new MethodInsnNode(Opcodes.INVOKESTATIC,
-                                "me/towdium/hecharacters/utils/Match", "wrap",
+                                "me/towdium/hecharacters/util/Match", "wrap",
                                 "(Ljava/lang/String;)Ljava/lang/String;", false));
                     }
                 }
