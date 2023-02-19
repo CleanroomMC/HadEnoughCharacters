@@ -37,8 +37,7 @@ public class TransformerString extends Transformer.Configurable {
                 "(Ljava/lang/CharSequence;)Z",
                 "me/towdium/jecharacters/util/Match",
                 "contains",
-                "(Ljava/lang/String;Ljava/lang/CharSequence;)Z",
-                false, Opcodes.INVOKESTATIC, Opcodes.H_INVOKESTATIC
+                "(Ljava/lang/String;Ljava/lang/CharSequence;)Z"
         );
         Transformer.transformInvoke(
                 n, "java/lang/String",
@@ -46,8 +45,7 @@ public class TransformerString extends Transformer.Configurable {
                 "me/towdium/jecharacters/util/Match",
                 "(Ljava/lang/Object;)Z",
                 "equals",
-                "(Ljava/lang/String;Ljava/lang/Object;)Z",
-                false, Opcodes.INVOKESTATIC, Opcodes.H_INVOKESTATIC
+                "(Ljava/lang/String;Ljava/lang/Object;)Z"
         );
     }
 }
