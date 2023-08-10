@@ -21,7 +21,7 @@ public class HechCore implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{"me.towdium.hecharacters.core.HechClassTransformer"};
+        return new String[0];
     }
 
     @Override
