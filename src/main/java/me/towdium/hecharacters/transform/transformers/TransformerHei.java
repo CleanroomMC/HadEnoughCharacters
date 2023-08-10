@@ -4,8 +4,6 @@ import me.towdium.hecharacters.HechConfig;
 import me.towdium.hecharacters.core.HechCore;
 import me.towdium.jecharacters.JechConfig;
 import me.towdium.jecharacters.transform.Transformer;
-import me.towdium.jecharacters.transform.TransformerRegistry;
-import me.towdium.jecharacters.transform.transformers.TransformerJei;
 import mezz.jei.config.Constants;
 import net.minecraftforge.fml.common.Loader;
 import org.objectweb.asm.Handle;
@@ -17,7 +15,6 @@ import org.objectweb.asm.tree.InvokeDynamicInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
