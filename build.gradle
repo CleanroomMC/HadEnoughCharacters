@@ -73,6 +73,7 @@ dependencies {
 }
 
 processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     inputs.property "version", version
     inputs.property "mcversion", project.mc_version
     from(sourceSets.main.resources.srcDirs) {

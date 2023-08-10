@@ -1,6 +1,8 @@
 package me.towdium.hecharacters.core;
 
 import com.google.common.eventbus.EventBus;
+import me.towdium.hecharacters.transform.transformers.TransformerHei;
+import me.towdium.jecharacters.transform.TransformerRegistry;
 import net.minecraftforge.fml.common.DummyModContainer;
 import net.minecraftforge.fml.common.LoadController;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -26,13 +28,15 @@ public class HechModContainer extends DummyModContainer {
         meta.description = "Help HEI read Pinyin";
         meta.url = "https://www.curseforge.com/minecraft/mc-mods/had-enough-characters";
         meta.logoFile = "icon.png";
+
+        TransformerRegistry.transformers.add(new TransformerHei());
     }
 
     @Override
     public List<ArtifactVersion> getDependencies() {
         return Arrays.asList(
                 VersionParser.parseVersionReference("jei@[4.22.0,)"),
-                VersionParser.parseVersionReference("jecharacters@[3.7.2,)")
+                VersionParser.parseVersionReference("jecharacters@[1.12.0-3.7.2,)")
         );
     }
 
@@ -58,11 +62,6 @@ public class HechModContainer extends DummyModContainer {
         } catch (ClassNotFoundException e) {
             return null;
         }
-    }
-
-    @Override
-    public String getGuiClassName() {
-        return "me.towdium.hecharacters.HechGuiFactory";
     }
 
 }
