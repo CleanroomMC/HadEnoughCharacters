@@ -10,6 +10,8 @@ import net.minecraftforge.fml.common.versioning.ArtifactVersion;
 import net.minecraftforge.fml.common.versioning.VersionParser;
 
 import java.io.File;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,8 +30,20 @@ public class HechModContainer extends DummyModContainer {
         meta.description = "Help HEI read Pinyin";
         meta.url = "https://www.curseforge.com/minecraft/mc-mods/had-enough-characters";
         meta.logoFile = "icon.png";
+        try {
+            registerTransformers();
+        } catch (Exception e) {
+            HechCore.LOG.error("Couldn't find JECh, HEI will not work");
+        }
 
-        TransformerRegistry.transformers.add(new TransformerHei());
+    }
+
+    private static void registerTransformers() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        Class<?> registryClazz = Class.forName("me.towdium.jecharacters.transform.TransformerRegistry");
+        Field getTransformers = registryClazz.getField("transformers");
+        getTransformers.setAccessible(true);
+        List transformers = (List) getTransformers.get(null);
+        transformers.add(new TransformerHei());
     }
 
     @Override
